@@ -16,15 +16,9 @@ function queueTime(customers, n) {
     console.log(customers[0]);
     return customers[0];
   } else {
-    const tab = new Array(n - 1);
+    const tab = new Array(n);
     tab.fill(0);
-
-    //console.log(tab);
-    /*
-    for (let i = 0; i <= n - 1; i++) {
-      tab[i] = customers[i];
-    }
-    */
+    
     function rosnaco(a, b) {
       return a - b;
     }
