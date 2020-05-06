@@ -16,15 +16,14 @@ function queueTime(customers, n) {
     console.log(customers[0]);
     return customers[0];
   } else {
-    const tab = new Array(n);
-    tab.fill(0);
-    
+    let tab = new Array(n).fill(0);
+
     function rosnaco(a, b) {
       return a - b;
     }
     for (l = 0; l <= klienci - 1; l++) {
       tab.sort(rosnaco);
-      tab[0] = tab[0] + customers[l];
+      tab[0] += customers[l];
     }
     tab.sort(rosnaco).reverse();
 
@@ -36,5 +35,5 @@ function queueTime(customers, n) {
 
 //queueTime([], 1); // 0);
 //queueTime([1, 2, 3, 4], 1); // 10);
-//queueTime([10,2,3,3], 2); //10
+queueTime([10,2,3,3], 2); //10
 queueTime([1, 2, 3, 4, 5], 10); // 5);
